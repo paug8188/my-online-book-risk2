@@ -61,7 +61,7 @@ P(4) = P(HHHT)
 ```
 
 
-So if we apply to the question, here is the implementation:
+So if we apply to the question using {eq}`prob_eq_label`, here is the implementation:
 
 ```{math}
 :label: coin_eq_label
@@ -70,7 +70,7 @@ P(HHHT) = P(H)P(H)P(H)P(T)
         = \frac{1}{16}
 ```
 
-In conclusion, the probability of getting the tail {numref}`coin-flipping` after 4 tosses is  $ \frac{1}{16} $
+In conclusion, using {eq}`coin_eq_label`, the probability of getting the tail {numref}`coin-flipping` after 4 tosses is  $ \frac{1}{16} $
 
 
 
