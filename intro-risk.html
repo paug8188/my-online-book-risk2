@@ -335,7 +335,7 @@ Informed decision always need data analytics.</p>
 </aside>
 <section id="definition-of-risk">
 <h2>Definition of Risk<a class="headerlink" href="#definition-of-risk" title="Permalink to this headline">#</a></h2>
-<p>I am quoting this from a book called <strong>Against The Gods</strong></p>
+<p>I am quoting this from a book called <span id="id1">[]</span></p>
 <blockquote>
 <div><p>“The word “risk” derives from the early Italian <em>risicare</em>, which means “to dare”. In this sense, risk is a choice rather than a fate. The actions we dare to take, which depend on how free we are to make choices.”</p>
 </div></blockquote>
@@ -352,7 +352,7 @@ Informed decision always need data analytics.</p>
 </section>
 <section id="law-of-probability">
 <h2>Law of Probability<a class="headerlink" href="#law-of-probability" title="Permalink to this headline">#</a></h2>
-<p>Still from the same book, <a class="reference internal" href="#against-the-gods-cover"><span class="std std-numref">Fig. 1</span></a>, I read that human beings started to quantify risk to win a gamble. It all started for a practical reason and based on human greed.
+<p>Still from the same book, <span id="id2">[]</span> <a class="reference internal" href="#against-the-gods-cover"><span class="std std-numref">Fig. 1</span></a>, I read that human beings started to quantify risk to win a gamble. It all started for a practical reason and based on human greed.
 Betting is about how to win the odds. Game of chance like flipping a coin has a 50:50 odds.
 So, assuming that I would like to toss the coin until I see the first tail then I would stop tossing.
 if <span class="math notranslate nohighlight">\( \chi \)</span> is the total number of tossing, and <span class="math notranslate nohighlight">\( \chi = 4 \)</span>, what is the probability of getting the tail at the end when tossing the coin 4 times?</p>
@@ -374,12 +374,12 @@ if <span class="math notranslate nohighlight">\( \chi \)</span> is the total num
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="n">P</span><span class="p">(</span><span class="n">HHHT</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>So if we apply to the question, here is the implementation:</p>
+<p>So if we apply to the question using <a class="reference internal" href="#equation-prob-eq-label">(1)</a>, here is the implementation:</p>
 <div class="math notranslate nohighlight" id="equation-coin-eq-label">
 <span class="eqno">(2)<a class="headerlink" href="#equation-coin-eq-label" title="Permalink to this equation">#</a></span>\[P(HHHT) = P(H)P(H)P(H)P(T)
         = \frac{1}{2}*\frac{1}{2}*\frac{1}{2}*\frac{1}{2}
         = \frac{1}{16}\]</div>
-<p>In conclusion, the probability of getting the tail <a class="reference internal" href="#coin-flipping"><span class="std std-numref">Fig. 2</span></a> after 4 tosses is  <span class="math notranslate nohighlight">\( \frac{1}{16} \)</span></p>
+<p>In conclusion, using <a class="reference internal" href="#equation-coin-eq-label">(2)</a>, the probability of getting the tail <a class="reference internal" href="#coin-flipping"><span class="std std-numref">Fig. 2</span></a> after 4 tosses is  <span class="math notranslate nohighlight">\( \frac{1}{16} \)</span></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please don’t be a gambler after this!</p>
