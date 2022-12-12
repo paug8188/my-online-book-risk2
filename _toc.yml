@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro-risk
+parts: 
+- caption: Managing Risk
+  chapters:
+  - file: risk-management
+- caption: Risk Around Us
+  chapters:
+  - file: credit-risk
+  - file: credit-rating
+
+  
