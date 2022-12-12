@@ -1,0 +1,902 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Risk Management &#8212; Understanding Risk</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Welcome to your Jupyter Book" href="credit-risk.html" />
+    <link rel="prev" title="Brief Introduction on Risk" href="intro-risk.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Understanding Risk</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro-risk.html">
+                    Brief Introduction on Risk
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Managing Risk
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Risk Management
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Risk Around Us
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="credit-risk.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="credit-rating.html">
+   Content with notebooks
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/risk-management.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/risk-management.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#earnest-ice-cream">
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Risk Management</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#earnest-ice-cream">
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="risk-management">
+<h1>Risk Management<a class="headerlink" href="#risk-management" title="Permalink to this headline">#</a></h1>
+<p>Informed decision is made based on data. We do not need to have the entire data to make one decision. That would take forever to make just one decision. Therefore, a notion of sampling comes into picture as the essential part of making informed decision.</p>
+<p><img alt="Risk Management in a Nutshell" src="https://www.invensislearning.com/blog/wp-content/uploads/2020/07/Common-Examples-of-Risk-Management-1068x552-1-1024x529.jpg" /></p>
+<p>If we talk about sampling, we have to touch on statistics real quick. I am not an expert in Math nor statistics, but this is my understanding of statistics based on <a class="reference external" href="https://www.investopedia.com/terms/s/statistics.asp">Investopia</a>:</p>
+<blockquote>
+<div><p>Statistics is a branch of applied mathematics that involves the collection, description, analysis, and inference of conclusions from quantitative data.</p>
+</div></blockquote>
+<p>I am going to point you to a <a class="reference external" href="https://en.wikipedia.org/wiki/Sampling_(statistics)">Wikipedia page</a> with a definition of sampling:</p>
+<blockquote>
+<div><p>Sampling is the selection of a subset (a statistical sample) of individuals from within a statistical population to estimate characteristics of the whole population.</p>
+</div></blockquote>
+<p>To determine a sample size, I found that <a class="reference external" href="https://www.statisticshowto.com/probability-and-statistics/find-sample-size/">The Cochran formula</a> can be used to calculate an ideal size given several factors.</p>
+<div class="math notranslate nohighlight" id="equation-sampling-formula">
+<span class="eqno">(3)<a class="headerlink" href="#equation-sampling-formula" title="Permalink to this equation">#</a></span>\[n_0 = \frac{Z^2pq}{e^2}\]</div>
+<blockquote>
+<div><p>where:</p>
+<ul class="simple">
+<li><p>e is the desired level of precision (i.e. the margin of error)</p></li>
+<li><p>p is the (estimated) proportion of the population which has the attribute in question</p></li>
+<li><p>q is 1 - p</p></li>
+</ul>
+</div></blockquote>
+<p>Honestly, I will make my example simple for the purpose of this project.</p>
+<section id="earnest-ice-cream">
+<h2><img alt="Earnest Ice Cream" src="https://earnestice.wpenginepowered.com/wp-content/uploads/2021/11/Home-Med-WereHiring-1.jpg" /><a class="headerlink" href="#earnest-ice-cream" title="Permalink to this headline">#</a></h2>
+<p>For example, I would like to find out through an online survey about Earnest’s favorite ice cream flavor. This would help Earnest to determine which flavor they should produce more or less, and subsequently reducing the risk of producing something people do not like. So they have 4 locations and so many customers. There is no way I could collect everyone’s opinion. My goal is to collect at least 200 inputs.</p>
+<p>Assuming I have the result and I would like to build a quick dataframe for exploration, I am going to use this code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">item1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Cookie and Cream&#39;</span><span class="p">,</span> <span class="s1">&#39;Regular&#39;</span> <span class="s1">&#39;20&#39;</span><span class="p">]</span>
+
+<span class="n">item2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Matcha&#39;</span><span class="p">,</span> <span class="s1">&#39;Vegan&#39;</span><span class="p">,</span> <span class="s1">&#39;15&#39;</span><span class="p">]</span>
+<span class="n">etc</span><span class="o">...</span>
+
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ice Cream Flavor&#39;</span><span class="p">,</span> <span class="s1">&#39;Dietary&#39;</span><span class="p">,</span> <span class="s1">&#39;Vote&#39;</span><span class="p">]</span>
+
+<span class="n">table_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Dataframe</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">item1</span><span class="p">,</span><span class="n">item2</span><span class="p">,</span> <span class="n">etc</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To generate the table, I am going to use this code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">table_1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>From the table, we can sort the result from the highest number to the lowest and determine the fractions of each flavor to answer our problem:</p>
+<blockquote>
+<div><p>Which flavor Earnest should produce more?
+Which flavor Earnest should produce less?</p>
+</div></blockquote>
+<p>The formula for the fraction is super simple. I don’t need to find any reference to spell this out:
+$<span class="math notranslate nohighlight">\(
+\frac{\chi}{y} * 100 = P 
+\)</span>$</p>
+<blockquote>
+<div><p>where:</p>
+<p>P is a percentage</p>
+<p><span class="math notranslate nohighlight">\(\chi\)</span> is observation 1 for example</p>
+<p>y is the total observation</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#building the dataframe</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">item1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Whiskey Hazelnut&#39;</span><span class="p">,</span> <span class="s1">&#39;Regular&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">item2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Cookie n Cream&#39;</span><span class="p">,</span> <span class="s1">&#39;Regular&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<span class="n">item3</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Vegan Choco&#39;</span><span class="p">,</span> <span class="s1">&#39;Vegan&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">item4</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Matcha&#39;</span><span class="p">,</span> <span class="s1">&#39;Regular&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+<span class="n">item5</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Vegan Maple Walnut&#39;</span><span class="p">,</span> <span class="s1">&#39;Vegan&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">item6</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Espresso Flake&#39;</span><span class="p">,</span> <span class="s1">&#39;Regular&#39;</span><span class="p">,</span> <span class="mi">17</span><span class="p">]</span>
+<span class="n">item7</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Oatmeal Brown Sugar&#39;</span><span class="p">,</span> <span class="s1">&#39;Regular&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">item8</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Serious Chocolate&#39;</span><span class="p">,</span> <span class="s1">&#39;Regular&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
+<span class="n">item9</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;London Fog&#39;</span><span class="p">,</span> <span class="s1">&#39;Regular&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
+<span class="n">item10</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Salted Caramel&#39;</span><span class="p">,</span> <span class="s1">&#39;Regular&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Flavor&#39;</span><span class="p">,</span> <span class="s1">&#39;Dietary&#39;</span><span class="p">,</span> <span class="s1">&#39;Vote&#39;</span><span class="p">]</span>
+
+<span class="n">earnest_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">item1</span><span class="p">,</span> <span class="n">item2</span><span class="p">,</span> <span class="n">item3</span><span class="p">,</span> <span class="n">item4</span><span class="p">,</span> <span class="n">item5</span><span class="p">,</span> <span class="n">item6</span><span class="p">,</span> <span class="n">item7</span><span class="p">,</span> <span class="n">item8</span><span class="p">,</span> <span class="n">item9</span><span class="p">,</span> <span class="n">item10</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
+<span class="n">earnest_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Flavor</th>
+      <th>Dietary</th>
+      <th>Vote</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Whiskey Hazelnut</td>
+      <td>Regular</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Cookie n Cream</td>
+      <td>Regular</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Vegan Choco</td>
+      <td>Vegan</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Matcha</td>
+      <td>Regular</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vegan Maple Walnut</td>
+      <td>Vegan</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Espresso Flake</td>
+      <td>Regular</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Oatmeal Brown Sugar</td>
+      <td>Regular</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Serious Chocolate</td>
+      <td>Regular</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>London Fog</td>
+      <td>Regular</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Salted Caramel</td>
+      <td>Regular</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate the total of vote</span>
+
+<span class="n">earnest_total_vote</span> <span class="o">=</span> <span class="n">earnest_df</span><span class="p">[[</span><span class="s1">&#39;Vote&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">earnest_total_vote</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vote    200
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#to sort the dataframe from the highest vote to the lowest vote</span>
+
+<span class="n">earnest_df</span> <span class="o">=</span> <span class="n">earnest_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Vote&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">earnest_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Flavor</th>
+      <th>Dietary</th>
+      <th>Vote</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Cookie n Cream</td>
+      <td>Regular</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Serious Chocolate</td>
+      <td>Regular</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>London Fog</td>
+      <td>Regular</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Vegan Choco</td>
+      <td>Vegan</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Espresso Flake</td>
+      <td>Regular</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Matcha</td>
+      <td>Regular</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Salted Caramel</td>
+      <td>Regular</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Vegan Maple Walnut</td>
+      <td>Vegan</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Whiskey Hazelnut</td>
+      <td>Regular</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Oatmeal Brown Sugar</td>
+      <td>Regular</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#showing the top three favorite ice cream flavor</span>
+
+<span class="n">earnest_df_top3</span> <span class="o">=</span> <span class="n">earnest_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">earnest_df_top3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Flavor</th>
+      <th>Dietary</th>
+      <th>Vote</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Cookie n Cream</td>
+      <td>Regular</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Serious Chocolate</td>
+      <td>Regular</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>London Fog</td>
+      <td>Regular</td>
+      <td>24</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#showing the top three least favorite ice cream flavor</span>
+<span class="n">earnest_df_bottom3</span> <span class="o">=</span> <span class="n">earnest_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">earnest_df_bottom3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Flavor</th>
+      <th>Dietary</th>
+      <th>Vote</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>Vegan Maple Walnut</td>
+      <td>Vegan</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Whiskey Hazelnut</td>
+      <td>Regular</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Oatmeal Brown Sugar</td>
+      <td>Regular</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install altair vega_datasets
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: altair in c:\users\paugusta\miniconda3\lib\site-packages (4.2.0)
+Requirement already satisfied: vega_datasets in c:\users\paugusta\miniconda3\lib\site-packages (0.9.0)
+Requirement already satisfied: jsonschema&gt;=3.0 in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (3.2.0)
+Requirement already satisfied: jinja2 in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (3.1.2)
+Requirement already satisfied: numpy in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (1.23.2)
+Requirement already satisfied: toolz in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (0.12.0)
+Requirement already satisfied: entrypoints in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (0.4)
+Requirement already satisfied: pandas&gt;=0.18 in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (1.4.3)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in c:\users\paugusta\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (0.18.1)
+Requirement already satisfied: six&gt;=1.11.0 in c:\users\paugusta\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (1.16.0)
+Requirement already satisfied: attrs&gt;=17.4.0 in c:\users\paugusta\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (21.4.0)
+Requirement already satisfied: setuptools in c:\users\paugusta\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (61.2.0)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in c:\users\paugusta\miniconda3\lib\site-packages (from pandas&gt;=0.18-&gt;altair) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\paugusta\miniconda3\lib\site-packages (from pandas&gt;=0.18-&gt;altair) (2022.4)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\users\paugusta\miniconda3\lib\site-packages (from jinja2-&gt;altair) (2.1.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="n">earnest_chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">earnest_df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Flavor&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Vote&#39;</span>
+<span class="p">)</span>
+<span class="n">earnest_chart</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-0208cbeeacb0401e9b367a6559907551"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-0208cbeeacb0401e9b367a6559907551") {
+      outputDiv = document.getElementById("altair-viz-0208cbeeacb0401e9b367a6559907551");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-2ce83f868f29ef681021a0a3fe61853d"}, "mark": "bar", "encoding": {"x": {"field": "Flavor", "type": "nominal"}, "y": {"field": "Vote", "type": "quantitative"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-2ce83f868f29ef681021a0a3fe61853d": [{"Flavor": "Cookie n Cream", "Dietary": "Regular", "Vote": 50}, {"Flavor": "Serious Chocolate", "Dietary": "Regular", "Vote": 45}, {"Flavor": "London Fog", "Dietary": "Regular", "Vote": 24}, {"Flavor": "Vegan Choco", "Dietary": "Vegan", "Vote": 20}, {"Flavor": "Espresso Flake", "Dietary": "Regular", "Vote": 17}, {"Flavor": "Matcha", "Dietary": "Regular", "Vote": 15}, {"Flavor": "Salted Caramel", "Dietary": "Regular", "Vote": 11}, {"Flavor": "Vegan Maple Walnut", "Dietary": "Vegan", "Vote": 10}, {"Flavor": "Whiskey Hazelnut", "Dietary": "Regular", "Vote": 5}, {"Flavor": "Oatmeal Brown Sugar", "Dietary": "Regular", "Vote": 3}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>This is the end of the example for data sampling exploration with Earnest scenario.
+The conclusion is that Earnest should consider to produce more of Cookie and Cream, Serious Chocolate, and London Fog, and maybe they have to consider produce less of the Oatmeal Brown Sugar, Whiskey Hazelnut, and Vegan Maple Walnut.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro-risk.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Brief Introduction on Risk</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="credit-risk.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Paula Augusta<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
