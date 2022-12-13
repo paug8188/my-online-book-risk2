@@ -52,7 +52,7 @@ Just remember:
 
 ```
 probability = P
-outcome of the experiment = \chi
+outcome of the experiment = $\chi$
 event = H or T
 ```
 
