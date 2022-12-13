@@ -38,12 +38,12 @@ Whenever you apply for financing, the financial institution will ask to grant ac
 For ilustration, TransUnion generated a credit score for individuals ranging between 300 to 900.
 There are ranges to evaluate your creditworthiness as follows:
 
-```
-Excellent = 833 <= $ \chi $ <= 900
-Very Good = 790 <= $ \chi $ <= 832
-Good = 743 <= $ \chi $ <= 789 
-Fair = 693 <= $ \chi $ <= 742 
-Poor = 300 <= $ \chi $ <= 692
+```python
+Excellent = 833 <= \chi <= 900
+Very Good = 790 <= \chi <= 832
+Good = 743 <= \chi <= 789 
+Fair = 693 <= \chi <= 742 
+Poor = 300 <= \chi <= 692
 ```
 
 Where $\chi$ is your score
