@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Risk Management &#8212; Understanding Risk</title>
+    <title>Assessing Risk &#8212; Understanding Risk</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Welcome to your Jupyter Book" href="credit-risk.html" />
+    <link rel="next" title="Credit Risk" href="credit-risk.html" />
     <link rel="prev" title="Brief Introduction on Risk" href="intro-risk.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -123,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Risk Management
+   Assessing Risk
   </a>
  </li>
 </ul>
@@ -135,12 +135,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="credit-risk.html">
-   Welcome to your Jupyter Book
+   Credit Risk
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="credit-rating.html">
-   Content with notebooks
+   Exploring Credit Rating Data
   </a>
  </li>
 </ul>
@@ -317,7 +317,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Risk Management</h1>
+                <h1>Assessing Risk</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -341,8 +341,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="risk-management">
-<h1>Risk Management<a class="headerlink" href="#risk-management" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="assessing-risk">
+<h1>Assessing Risk<a class="headerlink" href="#assessing-risk" title="Permalink to this headline">#</a></h1>
 <p>Informed decision is made based on data. We do not need to have the entire data to make one decision. That would take forever to make just one decision. Therefore, a notion of sampling comes into picture as the essential part of making informed decision.</p>
 <p><img alt="Risk Management in a Nutshell" src="https://www.invensislearning.com/blog/wp-content/uploads/2020/07/Common-Examples-of-Risk-Management-1068x552-1-1024x529.jpg" /></p>
 <p>If we talk about sampling, we have to touch on statistics real quick. I am not an expert in Math nor statistics, but this is my understanding of statistics based on <a class="reference external" href="https://www.investopedia.com/terms/s/statistics.asp">Investopia</a>:</p>
@@ -355,7 +355,7 @@ title="Print to PDF"
 </div></blockquote>
 <p>To determine a sample size, I found that <span id="id2">[]</span> can be used to calculate an ideal size given several factors.</p>
 <div class="math notranslate nohighlight" id="equation-sampling-formula">
-<span class="eqno">(3)<a class="headerlink" href="#equation-sampling-formula" title="Permalink to this equation">#</a></span>\[n_0 = \frac{Z^2pq}{e^2}\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-sampling-formula" title="Permalink to this equation">#</a></span>\[n_0 = \frac{Z^2pq}{e^2}\]</div>
 <blockquote>
 <div><p>where:</p>
 <ul class="simple">
@@ -734,7 +734,7 @@ dtype: int64
 </table>
 </div></div></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-output tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install altair vega_datasets
 </pre></div>
@@ -743,18 +743,18 @@ dtype: int64
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: altair in c:\users\paugusta\miniconda3\lib\site-packages (4.2.0)
 Requirement already satisfied: vega_datasets in c:\users\paugusta\miniconda3\lib\site-packages (0.9.0)
-Requirement already satisfied: numpy in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (1.23.2)
-Requirement already satisfied: entrypoints in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (0.4)
-Requirement already satisfied: jinja2 in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (3.1.2)
-Requirement already satisfied: toolz in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (0.12.0)
 Requirement already satisfied: pandas&gt;=0.18 in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (1.4.3)
 Requirement already satisfied: jsonschema&gt;=3.0 in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (3.2.0)
-Requirement already satisfied: pyrsistent&gt;=0.14.0 in c:\users\paugusta\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (0.18.1)
+Requirement already satisfied: toolz in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (0.12.0)
+Requirement already satisfied: entrypoints in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (0.4)
+Requirement already satisfied: jinja2 in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (3.1.2)
+Requirement already satisfied: numpy in c:\users\paugusta\miniconda3\lib\site-packages (from altair) (1.23.2)
+Requirement already satisfied: six&gt;=1.11.0 in c:\users\paugusta\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (1.16.0)
 Requirement already satisfied: setuptools in c:\users\paugusta\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (61.2.0)
 Requirement already satisfied: attrs&gt;=17.4.0 in c:\users\paugusta\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (21.4.0)
-Requirement already satisfied: six&gt;=1.11.0 in c:\users\paugusta\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (1.16.0)
-Requirement already satisfied: pytz&gt;=2020.1 in c:\users\paugusta\miniconda3\lib\site-packages (from pandas&gt;=0.18-&gt;altair) (2022.4)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in c:\users\paugusta\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (0.18.1)
 Requirement already satisfied: python-dateutil&gt;=2.8.1 in c:\users\paugusta\miniconda3\lib\site-packages (from pandas&gt;=0.18-&gt;altair) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\paugusta\miniconda3\lib\site-packages (from pandas&gt;=0.18-&gt;altair) (2022.4)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\users\paugusta\miniconda3\lib\site-packages (from jinja2-&gt;altair) (2.1.1)
 </pre></div>
 </div>
@@ -773,13 +773,13 @@ Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\users\paugusta\miniconda
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-8f6f5813c1e94dbea7036134cb75d51e"></div>
+<div id="altair-viz-fbe8cb622b6e42e381f4c9f7ff856546"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-8f6f5813c1e94dbea7036134cb75d51e") {
-      outputDiv = document.getElementById("altair-viz-8f6f5813c1e94dbea7036134cb75d51e");
+    if (outputDiv.id !== "altair-viz-fbe8cb622b6e42e381f4c9f7ff856546") {
+      outputDiv = document.getElementById("altair-viz-fbe8cb622b6e42e381f4c9f7ff856546");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -870,7 +870,7 @@ The conclusion is that Earnest should consider to produce more of Cookie and Cre
     <a class='right-next' id="next-link" href="credit-risk.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">Credit Risk</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

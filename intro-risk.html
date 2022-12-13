@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Risk Management" href="risk-management.html" />
+    <link rel="next" title="Assessing Risk" href="risk-management.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -122,7 +122,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="risk-management.html">
-   Risk Management
+   Assessing Risk
   </a>
  </li>
 </ul>
@@ -134,12 +134,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="credit-risk.html">
-   Welcome to your Jupyter Book
+   Credit Risk
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="credit-rating.html">
-   Content with notebooks
+   Exploring Credit Rating Data
   </a>
  </li>
 </ul>
@@ -333,6 +333,19 @@ Informed decision always need data analytics.</p>
 <p class="sidebar-title">When did the serious study of risk begin?</p>
 <p>It was in 1654, when the Rennaisance era was blooming!</p>
 </aside>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Managing Risk</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="risk-management.html">Assessing Risk</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Risk Around Us</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="credit-risk.html">Credit Risk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credit-rating.html">Exploring Credit Rating Data</a></li>
+</ul>
+</div>
 <section id="definition-of-risk">
 <h2>Definition of Risk<a class="headerlink" href="#definition-of-risk" title="Permalink to this headline">#</a></h2>
 <p>I am quoting this from a book called <span id="id1">[]</span></p>
@@ -342,7 +355,7 @@ Informed decision always need data analytics.</p>
 <figure class="align-default" id="against-the-gods-cover">
 <a class="reference internal image-reference" href="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1541411380l/128429.jpg"><img alt="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1541411380l/128429.jpg" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1541411380l/128429.jpg" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The Bible for Risk Managers</span><a class="headerlink" href="#against-the-gods-cover" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">The Bible for Risk Managers</span><a class="headerlink" href="#against-the-gods-cover" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -352,43 +365,39 @@ Informed decision always need data analytics.</p>
 </section>
 <section id="law-of-probability">
 <h2>Law of Probability<a class="headerlink" href="#law-of-probability" title="Permalink to this headline">#</a></h2>
-<p>Still from the same book, <span id="id2">[]</span> <a class="reference internal" href="#against-the-gods-cover"><span class="std std-numref">Fig. 1</span></a>, I read that human beings started to quantify risk to win a gamble. It all started for a practical reason and based on human greed.
+<p>Still from the same book, <span id="id2">[]</span> <a class="reference internal" href="#against-the-gods-cover"><span class="std std-numref">Fig. 3</span></a>, I read that human beings started to quantify risk to win a gamble. It all started for a practical reason and based on human greed.
 Betting is about how to win the odds. Game of chance like flipping a coin has a 50:50 odds.
 So, assuming that I would like to toss the coin until I see the first tail then I would stop tossing.
 if <span class="math notranslate nohighlight">\( \chi \)</span> is the total number of tossing, and <span class="math notranslate nohighlight">\( \chi = 4 \)</span>, what is the probability of getting the tail at the end when tossing the coin 4 times?</p>
 <figure class="align-default" id="coin-flipping">
 <a class="reference internal image-reference" href="https://cdn.pixabay.com/photo/2020/12/11/09/05/coin-flipping-5822271_1280.png"><img alt="https://cdn.pixabay.com/photo/2020/12/11/09/05/coin-flipping-5822271_1280.png" src="https://cdn.pixabay.com/photo/2020/12/11/09/05/coin-flipping-5822271_1280.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Game of Chance</span><a class="headerlink" href="#coin-flipping" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Game of Chance</span><a class="headerlink" href="#coin-flipping" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Here is the general formula:</p>
 <div class="math notranslate nohighlight" id="equation-prob-eq-label">
-<span class="eqno">(1)<a class="headerlink" href="#equation-prob-eq-label" title="Permalink to this equation">#</a></span>\[P(A \cap B) = P(A)P(B)\]</div>
+<span class="eqno">(3)<a class="headerlink" href="#equation-prob-eq-label" title="Permalink to this equation">#</a></span>\[P(A \cap B) = P(A)P(B)\]</div>
 <p>Just remember:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">probability</span> <span class="o">=</span> <span class="n">P</span>
-<span class="n">outcome</span> <span class="n">of</span> <span class="n">the</span> <span class="n">experiment</span> <span class="o">=</span> \<span class="n">chi</span>
-<span class="n">event</span> <span class="o">=</span> <span class="n">H</span> <span class="ow">or</span> <span class="n">T</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>probability = P
+outcome of the experiment = $\chi$
+event = H or T
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="n">P</span><span class="p">(</span><span class="n">HHHT</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>So if we apply to the question using <a class="reference internal" href="#equation-prob-eq-label">(1)</a>, here is the implementation:</p>
+<p>So if we apply to the question using <a class="reference internal" href="#equation-prob-eq-label">(3)</a>, here is the implementation:</p>
 <div class="math notranslate nohighlight" id="equation-coin-eq-label">
-<span class="eqno">(2)<a class="headerlink" href="#equation-coin-eq-label" title="Permalink to this equation">#</a></span>\[P(HHHT) = P(H)P(H)P(H)P(T)
+<span class="eqno">(4)<a class="headerlink" href="#equation-coin-eq-label" title="Permalink to this equation">#</a></span>\[P(HHHT) = P(H)P(H)P(H)P(T)
         = \frac{1}{2}*\frac{1}{2}*\frac{1}{2}*\frac{1}{2}
         = \frac{1}{16}\]</div>
-<p>In conclusion, using <a class="reference internal" href="#equation-coin-eq-label">(2)</a>, the probability of getting the tail <a class="reference internal" href="#coin-flipping"><span class="std std-numref">Fig. 2</span></a> after 4 tosses is  <span class="math notranslate nohighlight">\( \frac{1}{16} \)</span></p>
+<p>In conclusion, using <a class="reference internal" href="#equation-coin-eq-label">(4)</a>, the probability of getting the tail <a class="reference internal" href="#coin-flipping"><span class="std std-numref">Fig. 4</span></a> after 4 tosses is  <span class="math notranslate nohighlight">\( \frac{1}{16} \)</span></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please don’t be a gambler after this!</p>
 </div>
 </section>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -421,7 +430,7 @@ if <span class="math notranslate nohighlight">\( \chi \)</span> is the total num
     <a class='right-next' id="next-link" href="risk-management.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Risk Management</p>
+        <p class="prev-next-title">Assessing Risk</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

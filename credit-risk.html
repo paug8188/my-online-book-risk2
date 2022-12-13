@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to your Jupyter Book &#8212; Understanding Risk</title>
+    <title>Credit Risk &#8212; Understanding Risk</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Content with notebooks" href="credit-rating.html" />
-    <link rel="prev" title="Risk Management" href="risk-management.html" />
+    <link rel="next" title="Exploring Credit Rating Data" href="credit-rating.html" />
+    <link rel="prev" title="Assessing Risk" href="risk-management.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="risk-management.html">
-   Risk Management
+   Assessing Risk
   </a>
  </li>
 </ul>
@@ -133,12 +135,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Welcome to your Jupyter Book
+   Credit Risk
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="credit-rating.html">
-   Content with notebooks
+   Exploring Credit Rating Data
   </a>
  </li>
 </ul>
@@ -263,7 +265,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Welcome to your Jupyter Book</h1>
+                <h1>Credit Risk</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -275,13 +277,55 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this headline">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="credit-risk">
+<h1>Credit Risk<a class="headerlink" href="#credit-risk" title="Permalink to this headline">#</a></h1>
+<p>One of the risk that is relevant to our day to day life is credit risk.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">what is credit risk?</p>
+<p>Credit risk is the possibility that a borrower or counterparty would fail to meet its debt obligations.</p>
+</div>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="https://www.piranirisk.com/hs-fs/hubfs/20_riesgo_crediticio.jpg?width=1188&amp;name=20_riesgo_crediticio.jpg"><img alt="https://www.piranirisk.com/hs-fs/hubfs/20_riesgo_crediticio.jpg?width=1188&amp;name=20_riesgo_crediticio.jpg" src="https://www.piranirisk.com/hs-fs/hubfs/20_riesgo_crediticio.jpg?width=1188&amp;name=20_riesgo_crediticio.jpg" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Credit Risk</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>There are a lot of sub-categories of credit risk but for this purpose, I will not go further into detail.
+Something relevant to us pertaining to credit risk is a credit rating.
+This is a report to evaluate if someone or an entity is credit-worthy for financial institutions.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">How do you know your credit rating?</p>
+<p>Equifax and TransUnion are two big credit bureaus in Canada. You can get your credit report for free!</p>
+</aside>
+<figure class="align-default" id="credit-bureau">
+<a class="reference internal image-reference" href="https://icash.ca/images/learn/major-credit-bureaus.jpg"><img alt="https://icash.ca/images/learn/major-credit-bureaus.jpg" src="https://icash.ca/images/learn/major-credit-bureaus.jpg" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Equifax and TransUnion</span><a class="headerlink" href="#credit-bureau" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Whenever you apply for financing, the financial institution will ask to grant access to your credit report.</p>
+</div>
+<p>For ilustration, TransUnion generated a credit score for individuals ranging between 300 to 900.
+There are ranges to evaluate your creditworthiness as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Excellent = 833 &lt;= $\chi$ &lt;= 900
+Very Good = 790 &lt;= $\chi$ &lt;= 832
+Good = 743 &lt;= $\chi$ &lt;= 789 
+Fair = 693 &lt;= $\chi$ &lt;= 742 
+Poor = 300 &lt;= $\chi$ &lt;= 692
+</pre></div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(\chi\)</span> is your score</p>
+<p>To code this, we can use loc function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">credit_score_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">credit_score_df</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">833</span> <span class="ow">and</span> <span class="n">credit_score_df</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">900</span><span class="p">,</span> <span class="s1">&#39;Creditworthiness&#39;</span> <span class="o">=</span> <span class="s1">&#39;Excellent&#39;</span><span class="p">]</span>
+<span class="n">so</span> <span class="n">on</span>
+</pre></div>
+</div>
+<div class="math notranslate nohighlight" id="equation-credit-score">
+<span class="eqno">(2)<a class="headerlink" href="#equation-credit-score" title="Permalink to this equation">#</a></span>\[\chi = \omega_1 \cdot \ipsilon_1 + \omega_2 \cdot \ipsilon_2 + ... + \omega_N \cdot \ipsilon_N\]</div>
+<p>How is the credit score calculated?
+Typically it is calculated using different metrics with their relative weights just like the formula ilustrated on <a class="reference internal" href="#equation-credit-score">(2)</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -315,13 +359,13 @@ It does not go in-depth into any particular topic - check out <a class="referenc
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Risk Management</p>
+            <p class="prev-next-title">Assessing Risk</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="credit-rating.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Content with notebooks</p>
+        <p class="prev-next-title">Exploring Credit Rating Data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

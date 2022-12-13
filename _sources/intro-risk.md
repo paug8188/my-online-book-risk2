@@ -9,6 +9,9 @@ Informed decision always need data analytics.
 It was in 1654, when the Rennaisance era was blooming!
 ```
 
+```{tableofcontents}
+```
+
 ## Definition of Risk
 
 I am quoting this from a book called {cite}`against_the_gods`
@@ -52,7 +55,7 @@ Just remember:
 
 ```
 probability = P
-outcome of the experiment = \chi
+outcome of the experiment = $\chi$
 event = H or T
 ```
 
