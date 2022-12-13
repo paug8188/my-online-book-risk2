@@ -58,7 +58,7 @@ so on
 
 ```{math}
 :label: credit_score
-\chi = \omega_1 \cdot \ipsilon_1 + \omega_2 \cdot \ipsilon_2 + ... + \omega_N \cdot \ipsilon_N
+\chi = \omega_1 \cdot \upsilon_1 + \omega_2 \cdot \upsilon_2 + ... + \omega_N \cdot \upsilon_N
 ```
 
 How is the credit score calculated?
