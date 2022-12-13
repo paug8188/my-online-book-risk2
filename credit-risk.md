@@ -39,11 +39,11 @@ For ilustration, TransUnion generated a credit score for individuals ranging bet
 There are ranges to evaluate your creditworthiness as follows:
 
 ```
-Excellent = 833 <= $\chi$ <= 900
-Very Good = 790 <= $\chi$ <= 832
-Good = 743 <= $\chi$ <= 789 
-Fair = 693 <= $\chi$ <= 742 
-Poor = 300 <= $\chi$ <= 692
+Excellent = 833 <= $ \chi $ <= 900
+Very Good = 790 <= $ \chi $ <= 832
+Good = 743 <= $ \chi $ <= 789 
+Fair = 693 <= $ \chi $ <= 742 
+Poor = 300 <= $ \chi $ <= 692
 ```
 
 Where $\chi$ is your score
